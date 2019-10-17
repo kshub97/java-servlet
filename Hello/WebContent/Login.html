@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+
+<script type="text/javascript">
+var dataArray = [
+	{name:"username",password:"1234",key:"user"},    
+            {name:"user",password:"123@",key:"user"},    
+            {name:"admin1",password:"4321",key:"admin"}, 
+            {name:"admin2",password:"321",key:"admin"}
+];
+
+var dataName=dataArray[0].name;
+var dataPaasword=dataArray[0].password;
+var dataKey1=dataArray[1].key;
+var dataName1=dataArray[1].name;
+var dataPaasword1=dataArray[1].password;
+var dataKey2=dataArray[2].key;
+var dataName2=dataArray[2].name;
+var dataPaasword2=dataArray[2].password;
+
+var dataName3=dataArray[3].name;
+var dataPaasword3=dataArray[3].password;
+ 
+ function validate(){
+	 
+	 
+	 if((document.myform.username.value ==dataName) && (document.myform.userpass.value==dataPassword) &&(document.myform.usertype.value==dataKey1) ){
+
+		 return true;
+		 window.location = "";
+	 }
+	 else{
+		 alert("username or password does not match with user type");
+		 window.location = "Login.html";
+	 }
+	 if((document.myform.username.value ==dataName1) && (document.myform.userpass.value==dataPassword1) &&(document.myform.usertype.value==dataKey1) ){
+		return true;	
+	 }
+	 else{
+		 alert("username or password does not match with user type");
+		 sessio
+	 }
+	 if((document.myform.username.value ==dataName2) && (document.myform.userpass.value==dataPassword2) &&(document.myform.usertype.value==dataKey2) ){
+		 return false;
+	 }
+	 else{
+		 alert("username or password does not match with user type");
+	 }
+	 if((document.myform.username.value ==dataName3) && (document.myform.userpass.value==dataPassword3) &&(document.myform.usertype.value==dataKey2) ){
+		 return false;	
+	 }
+	 else{
+		 alert("username or password does not match with user type");
+	 }
+	 
+ }
+
+</script>
+<body>
+<form action="LoginPage" name="myform" method="post" >  
+Name:<input type="text" name="username"/><br/><br/>  
+Password:<input type="password" name="userpass"/><br/><br/>  
+Usertype:<input type="radio" name=usertype id="user" value="user">User<br>
+		<input type="radio" name=usertype id="admin" value="admin">Admin<br>
+<input type="submit" value="login"  onclick = "validate()" >Submit</input>
+
+
+</form> 
+</body>
+
+</html>
